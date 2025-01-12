@@ -20,7 +20,7 @@ function AlForgot() {
     formdata.append("verify_token", verify_token);
 
     axios
-      .post("http://127.0.0.1:8000/forgotal/", formdata, {
+      .post("http://taiwoakinpennu2.pythonanywhere.com/forgotal/", formdata, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((res) => {

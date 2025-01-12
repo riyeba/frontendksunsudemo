@@ -18,7 +18,7 @@ function SiteAdmin() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/nsu/");
+        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/nsu/");
         setActive(response.data);
         setIsLoading(false);
         console.log(response);
@@ -38,7 +38,7 @@ function SiteAdmin() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/female/");
+        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/female/");
         setActivef(response.data);
         setIsLoadingf(false);
         console.log(response);
@@ -57,7 +57,7 @@ function SiteAdmin() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/nsual/");
+        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/nsual/");
         setActiveal(response.data);
         setIsLoadingal(false);
         console.log(response);

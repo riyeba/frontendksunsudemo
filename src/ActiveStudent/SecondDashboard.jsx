@@ -12,7 +12,7 @@ function SecondDashBoard() {
   useEffect(() => {
     try {
       axios
-        .get(`http://127.0.0.1:8000/nsu/${params.member_id}/`)
+        .get(`https://taiwoakinpennu2.pythonanywhere.com/nsu/${params.member_id}/`)
         .then((response) => {
           setDash(response.data);
         });

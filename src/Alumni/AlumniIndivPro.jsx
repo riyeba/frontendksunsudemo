@@ -11,7 +11,7 @@ function AlumniDashBoardAl() {
   useEffect(() => {
     try {
       axios
-        .get(`http://127.0.0.1:8000/nsual/${params.member_idalumnii}/`)
+        .get(`http://taiwoakinpennu2.pythonanywhere.com/nsual/${params.member_idalumnii}/`)
         .then((response) => {
           setData(response.data);
         });

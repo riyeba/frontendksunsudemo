@@ -25,7 +25,7 @@ function EditPass() {
 
 
     axios
-      .post(`http://127.0.0.1:8000/editpass/${forgot_id}/`, formdata, {
+      .post(`https://taiwoakinpennu2.pythonanywhere.com/editpass/${forgot_id}/`, formdata, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((res) => {

@@ -55,7 +55,7 @@ setFormField(data)
     
     e.preventDefault()
  formField.forEach(eachperson=>{
-  axios.post("http://127.0.0.1:8000/attend/", {
+  axios.post("http://taiwoakinpennu2.pythonanywhere.com/attend/", {
     name:eachperson.name,
     title:title,
     date:date

@@ -52,7 +52,7 @@
 
 
 //   try {
-//     const response = await axios.post("http://127.0.0.1:8000/nsu/", formdata);
+//     const response = await axios.post("https://taiwoakinpennu2.pythonanywhere.com/nsu/", formdata);
 //     console.log(response)
 //     if (response.status === 201) {
 //       toast.success("data successfully uploaded");
@@ -445,7 +445,7 @@ function Register() {
         toast.error("select your gender")
         return false
       }
-      const SelectGender= Gender === "Female"? "http://127.0.0.1:8000/female/" : "http://127.0.0.1:8000/nsu/"
+      const SelectGender= Gender === "Female"? "https://taiwoakinpennu2.pythonanywhere.com/female/" : "https://taiwoakinpennu2.pythonanywhere.com/nsu/"
       const response = await axios.post(SelectGender, formdata);
       if (response.status === 201) {
         toast.success("Data successfully uploaded");

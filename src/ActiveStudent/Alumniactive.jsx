@@ -12,7 +12,7 @@ function AlumniActive() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/nsual/");
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/nsual/");
         setActive(response.data);
         setIsLoading(false);
         console.log(response);

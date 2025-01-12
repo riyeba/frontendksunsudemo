@@ -23,7 +23,7 @@ function AlEditPass() {
 
 
     axios
-      .post(`http://127.0.0.1:8000/aleditpass/${forgot_id}/`, formdata, {
+      .post(`http://taiwoakinpennu2.pythonanywhere.com/aleditpass/${forgot_id}/`, formdata, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((res) => {

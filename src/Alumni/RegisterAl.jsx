@@ -39,7 +39,7 @@ function RegisterAl() {
 
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/nsual/",
+        "http://taiwoakinpennu2.pythonanywhere.com/nsual/",
         formdata
       );
       if (response.status === 201) {

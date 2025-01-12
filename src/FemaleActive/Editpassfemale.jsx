@@ -25,7 +25,7 @@ function EditPassfemale() {
 
 
     axios
-      .post(`http://127.0.0.1:8000/editpassf/${forgot_idd}/`, formdata, {
+      .post(`http://taiwoakinpennu2.pythonanywhere.com/editpassf/${forgot_idd}/`, formdata, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((res) => {

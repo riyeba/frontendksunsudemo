@@ -22,7 +22,7 @@ function OTP() {
 
 
     axios
-      .post("http://127.0.0.1:8000/check/", formdata, {
+      .post("https://taiwoakinpennu2.pythonanywhere.com/check/", formdata, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((response) => {

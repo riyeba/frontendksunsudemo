@@ -34,7 +34,7 @@ function LogOut(){
 
 
   try {
-    const response = await axios.post(`http://127.0.0.1:8000/remove/${active_id}/`, formdata);
+    const response = await axios.post(`https://taiwoakinpennu2.pythonanywhere.com/remove/${active_id}/`, formdata);
   
     
     if (response.data.bool===true) {

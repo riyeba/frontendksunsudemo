@@ -13,7 +13,7 @@ function ActiveStudents() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/nsu/");
+        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/nsu/");
         setActive(response.data);
         setIsLoading(false);
         console.log(response);

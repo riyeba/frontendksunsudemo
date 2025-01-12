@@ -44,7 +44,7 @@ function AlEditProfile() {
 
     try {
         axios
-          .put(`http://127.0.0.1:8000/nsual/${id}/`, formdata)
+          .put(`http://taiwoakinpennu2.pythonanywhere.com/nsual/${id}/`, formdata)
           .then((response) => {
             console.log(response)
             if (response.status === 200) {

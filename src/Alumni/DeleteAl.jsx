@@ -36,7 +36,7 @@ console.log(active_id)
   
 
   try {
-    const response = await axios.post(`http://127.0.0.1:8000/alremove/${active_id}/`, formdata);
+    const response = await axios.post(`http://taiwoakinpennu2.pythonanywhere.com/alremove/${active_id}/`, formdata);
   
     
     if (response.data.bool===true) {

@@ -14,7 +14,7 @@ function FemaleStudent() {
 console.log(active_iddd)
   useEffect(() => {
     try {
-      axios.get(`http://127.0.0.1:8000/female/${active_iddd}/`).then((response) => {
+      axios.get(`http://taiwoakinpennu2.pythonanywhere.com/female/${active_iddd}/`).then((response) => {
         setData(response.data);
       });
     } catch (error) {
@@ -29,7 +29,7 @@ console.log(active_iddd)
     formData.append("verify_token", verify_token);
 
     axios
-      .post(`http://127.0.0.1:8000/deleteotpf/${id}/`, formData, {
+      .post(`http://taiwoakinpennu2.pythonanywhere.com/deleteotpf/${id}/`, formData, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((res) => {

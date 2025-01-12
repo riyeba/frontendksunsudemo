@@ -9,7 +9,7 @@ const DeleteExconow = () => {
   useEffect(() => {
     const fetchExcoData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/port/");
+        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/port/");
         console.log("Fetched data:", response.data); // Debugging the response
         if (Array.isArray(response.data)) {
           setExcoData(response.data);
@@ -33,7 +33,7 @@ const DeleteExconow = () => {
     setExcoData(updatedData);
 
     try {
-      await axios.delete(`http://127.0.0.1:8000/port/${id}/`);
+      await axios.delete(`http://taiwoakinpennu2.pythonanywhere.com/port/${id}/`);
       alert("Exco deleted successfully!");
     } catch (error) {
       console.error("Error deleting exco:", error);

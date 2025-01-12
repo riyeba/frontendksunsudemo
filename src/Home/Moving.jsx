@@ -14,7 +14,7 @@
 //   useEffect(() => {
 //     const fetchDataExco = async () => {
 //       try {
-//         const response = await axios.get("http://127.0.0.1:8000/event/");
+//         const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/event/");
 //         setEventdata(response.data);
 //         setIsLoading(false);
         
@@ -67,7 +67,7 @@ function RecentEvent() {
   useEffect(() => {
     const fetchDataExco = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/event/");
+        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/event/");
         setEventdata(response.data);
         setIsLoading(false);
       } catch (error) {

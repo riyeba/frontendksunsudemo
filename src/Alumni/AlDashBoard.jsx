@@ -15,7 +15,7 @@ function AlDashBoard() {
   useEffect(() => {
     try {
       axios
-        .get(`http://127.0.0.1:8000/nsual/${active_id}/`)
+        .get(`http://taiwoakinpennu2.pythonanywhere.com/nsual/${active_id}/`)
         .then((response) => {
           setData(response.data);
         });
@@ -32,7 +32,7 @@ function AlDashBoard() {
     formdata.append("verify_token", verify_token);
 
     axios
-      .post(`http://127.0.0.1:8000/aldeleteotp/${id}/`, formdata, {
+      .post(`http://taiwoakinpennu2.pythonanywhere.com/aldeleteotp/${id}/`, formdata, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` }, 
       })
       .then((res) => {

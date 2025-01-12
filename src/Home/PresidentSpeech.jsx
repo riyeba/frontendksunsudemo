@@ -30,7 +30,7 @@ function PresSpeech() {
 
 
   try {
-    const response = await axios.post("http://127.0.0.1:8000/pres/", formdata);
+    const response = await axios.post("http://taiwoakinpennu2.pythonanywhere.com/pres/", formdata);
     console.log(response)
     if (response.status === 201) {
       toast.success("successfully uploaded");

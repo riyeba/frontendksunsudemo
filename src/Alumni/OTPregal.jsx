@@ -21,7 +21,7 @@ function OTPAL() {
 
 
     axios
-      .post("http://127.0.0.1:8000/checkal/", formdata, {
+      .post("http://taiwoakinpennu2.pythonanywhere.com/checkal/", formdata, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((response) => {

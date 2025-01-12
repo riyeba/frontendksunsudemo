@@ -22,7 +22,7 @@ function LandingPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/pres/");
+        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/pres/");
         setActive(response.data);
         setIsLoading(false);
         
@@ -46,7 +46,7 @@ console.log(active)
   useEffect(() => {
     const fetchDataExco = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/port/");
+        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/port/");
         setExcodata(response.data);
         setIsLoading(false);
         

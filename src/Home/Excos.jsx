@@ -37,7 +37,7 @@ function Excos() {
 
 
   try {
-    const response = await axios.post("http://127.0.0.1:8000/port/", formdata);
+    const response = await axios.post("http://taiwoakinpennu2.pythonanywhere.com/port/", formdata);
     console.log(response)
     if (response.status === 201) {
       toast.success("data successfully uploaded");

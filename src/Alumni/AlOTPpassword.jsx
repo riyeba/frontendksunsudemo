@@ -22,7 +22,7 @@ const navigate=useNavigate()
 
 
     axios
-      .post("http://127.0.0.1:8000/alverify/", formdata, {
+      .post("http://taiwoakinpennu2.pythonanywhere.com/alverify/", formdata, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((response) => {
