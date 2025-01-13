@@ -293,7 +293,7 @@ const LandingPage = () => {
               >
                 {active2?.name}
               </p>
-              <p className="fs-5" style={{ marginTop: "-0.8rem", fontWeight: "500" }}>
+              <p className="fs-5" style={{ marginTop: "-0.5rem", fontWeight: "500" }}>
                 NSU-KSU President
               </p>
             </div>
