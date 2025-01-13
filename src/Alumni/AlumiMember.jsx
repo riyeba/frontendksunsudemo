@@ -12,7 +12,7 @@ function AlumniStudents() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/nsual/");
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/nsual/");
         setActive(response.data);
         setIsLoading(false);
         console.log(response);

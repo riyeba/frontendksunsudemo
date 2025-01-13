@@ -26,7 +26,7 @@ function SignInAl() {
 
 
     axios
-      .post("http://taiwoakinpennu2.pythonanywhere.com/loginal/", formdata, {
+      .post("https://taiwoakinpennu2.pythonanywhere.com/loginal/", formdata, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((res) => {

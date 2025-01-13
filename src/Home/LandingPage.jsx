@@ -22,7 +22,7 @@ function LandingPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/pres/");
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/pres/");
         setActive(response.data);
         setIsLoading(false);
         
@@ -46,7 +46,7 @@ console.log(active)
   useEffect(() => {
     const fetchDataExco = async () => {
       try {
-        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/port/");
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/port/");
         setExcodata(response.data);
         setIsLoading(false);
         

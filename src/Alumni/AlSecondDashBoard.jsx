@@ -12,7 +12,7 @@ function AlSecondDashBoard() {
   useEffect(() => {
     try {
       axios
-        .get(`http://taiwoakinpennu2.pythonanywhere.com/nsu/${params.member_idal}/`)
+        .get(`https://taiwoakinpennu2.pythonanywhere.com/nsu/${params.member_idal}/`)
         .then((response) => {
           setDash(response.data);
         });

@@ -125,7 +125,7 @@
 
       
       
-//       const response = await axios.put(`http://taiwoakinpennu2.pythonanywhere.com/female/${id}/`, formdata);
+//       const response = await axios.put(`https://taiwoakinpennu2.pythonanywhere.com/female/${id}/`, formdata);
 //       if (response.status === 201) {
 //         toast.success("Data updated successfully ");
 //         navigate("/femalepage");
@@ -448,7 +448,7 @@ function EditProfilef() {
         return false
       }
      
-      const response = await axios.put(`http://taiwoakinpennu2.pythonanywhere.com/female/${id}/`, formdata);
+      const response = await axios.put(`https://taiwoakinpennu2.pythonanywhere.com/female/${id}/`, formdata);
      
       if (response.statusText === 'OK') {
         

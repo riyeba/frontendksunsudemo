@@ -12,7 +12,7 @@ function AdminSecondbashboard() {
   useEffect(() => {
     try {
       axios
-        .get(`http://taiwoakinpennu2.pythonanywhere.com/nsu/${params.member_id}/`)
+        .get(`https://taiwoakinpennu2.pythonanywhere.com/nsu/${params.member_id}/`)
         .then((response) => {
           setDash(response.data);
         });

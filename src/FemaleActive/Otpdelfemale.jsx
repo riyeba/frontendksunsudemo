@@ -34,7 +34,7 @@
 
 
 //   try {
-//     const response = await axios.post(`http://taiwoakinpennu2.pythonanywhere.com/removefemale/${active_id}/`, formdata);
+//     const response = await axios.post(`https://taiwoakinpennu2.pythonanywhere.com/removefemale/${active_id}/`, formdata);
   
     
 //     if (response.data.bool===true) {
@@ -125,7 +125,7 @@ function LogOut(){
 
 
   try {
-    const response = await axios.post(`http://taiwoakinpennu2.pythonanywhere.com/removefemale/${active_id}/`, formdata);
+    const response = await axios.post(`https://taiwoakinpennu2.pythonanywhere.com/removefemale/${active_id}/`, formdata);
   
     console.log(response)
     if (response.data.booll===true) {

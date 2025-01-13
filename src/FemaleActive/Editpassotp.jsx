@@ -19,7 +19,7 @@ function Forgototpf() {
     formdata.append("verify_token", verify_token);
 
     axios
-      .post("http://taiwoakinpennu2.pythonanywhere.com/forgot/", formdata, {
+      .post("https://taiwoakinpennu2.pythonanywhere.com/forgot/", formdata, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((res) => {

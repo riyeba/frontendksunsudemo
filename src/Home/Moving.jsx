@@ -14,7 +14,7 @@
 //   useEffect(() => {
 //     const fetchDataExco = async () => {
 //       try {
-//         const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/event/");
+//         const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/event/");
 //         setEventdata(response.data);
 //         setIsLoading(false);
         
@@ -67,7 +67,7 @@ function RecentEvent() {
   useEffect(() => {
     const fetchDataExco = async () => {
       try {
-        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/event/");
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/event/");
         setEventdata(response.data);
         setIsLoading(false);
       } catch (error) {

@@ -12,7 +12,7 @@ function IndividualFemale() {
   useEffect(() => {
     try {
       axios
-        .get(`http://taiwoakinpennu2.pythonanywhere.com/female/${params.member_id}/`)
+        .get(`https://taiwoakinpennu2.pythonanywhere.com/female/${params.member_id}/`)
         .then((response) => {
           setDash(response.data);
         });

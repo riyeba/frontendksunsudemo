@@ -18,7 +18,7 @@ function SiteAdmin() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/nsu/");
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/nsu/");
         setActive(response.data);
         setIsLoading(false);
         console.log(response);
@@ -38,7 +38,7 @@ function SiteAdmin() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/female/");
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/female/");
         setActivef(response.data);
         setIsLoadingf(false);
         console.log(response);
@@ -57,7 +57,7 @@ function SiteAdmin() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/nsual/");
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/nsual/");
         setActiveal(response.data);
         setIsLoadingal(false);
         console.log(response);

@@ -12,7 +12,7 @@ function AlActiveStudents() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/nsu/");
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/nsu/");
         setActive(response.data);
         setIsLoading(false);
         

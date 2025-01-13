@@ -13,7 +13,7 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/female/");
+//         const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/female/");
 //         setActive(response.data);
 //         setIsLoading(false);
 //         console.log(response);
@@ -133,7 +133,7 @@ function FemaleStudents() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/female/");
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/female/");
         setActive(response.data);
         setIsLoading(false);
         console.log(response);

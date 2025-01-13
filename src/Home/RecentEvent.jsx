@@ -32,7 +32,7 @@ function RecentEvents() {
 
 
   try {
-    const response = await axios.post("http://taiwoakinpennu2.pythonanywhere.com/event/", formdata);
+    const response = await axios.post("https://taiwoakinpennu2.pythonanywhere.com/event/", formdata);
     console.log(response)
     if (response.status === 201) {
       toast.success("data successfully uploaded");

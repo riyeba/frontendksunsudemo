@@ -30,7 +30,7 @@ function Logo() {
 
 
   try {
-    const response = await axios.post("http://taiwoakinpennu2.pythonanywhere.com/logo/", formdata);
+    const response = await axios.post("https://taiwoakinpennu2.pythonanywhere.com/logo/", formdata);
     console.log(response)
     if (response.status === 201) {
       toast.success("successfully uploaded");

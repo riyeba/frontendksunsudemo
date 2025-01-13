@@ -23,7 +23,7 @@ const[loading,setIsLoading]=useState(false)
   useEffect(() => {
     const fetchDataExco = async () => {
       try {
-        const response = await axios.get("http://taiwoakinpennu2.pythonanywhere.com/upcoming/");
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/upcoming/");
         setUpcomingdata(response.data);
         setIsLoading(false);
         

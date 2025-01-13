@@ -28,7 +28,7 @@ const[loading,setLoading]=useState(false)
 
 
     axios
-      .get(`http://taiwoakinpennu2.pythonanywhere.com/attending/?date=${date}`)
+      .get(`https://taiwoakinpennu2.pythonanywhere.com/attending/?date=${date}`)
       .then(res=>{
         setData(res.data)
       })
