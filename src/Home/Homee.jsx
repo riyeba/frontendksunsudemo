@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Homee() {
   return (
     <div className="container-fluid  min-vh-100 d-flex align-items-center justify-content-center bg-white">
       <div className="text-center">
@@ -27,4 +27,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Homee;

@@ -493,6 +493,9 @@ const LandingPage = () => {
 
         {/* Excos Section */}
         <section id="excopage" className="mb-5">
+        <h3 className="text-center" style={{ fontSize: "2rem", marginBottom: "20px" }}>
+            Meet Our Excos
+          </h3>
           <div className="d-flex flex-wrap justify-content-center gap-4">
             {excodata.map((el) => (
               <div
