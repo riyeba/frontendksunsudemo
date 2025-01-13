@@ -259,10 +259,10 @@ function DashBoard() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (!active_id) {
-      navigate("/login"); // Redirect to login if active_id is not set
-      return;
-    }
+    // if (!active_id) {
+    //   navigate("/login"); // Redirect to login if active_id is not set
+    //   return;
+    // }
 
     axios
       .get(`https://taiwoakinpennu2.pythonanywhere.com/nsu/${active_id}/`)
@@ -301,7 +301,7 @@ function DashBoard() {
 
   const LogOut = () => {
     localStorage.removeItem("UserLoginStatus");
-     navigate("/login/")
+    window.location.href = "/login";
   };
 
   const goForm = (id, el) => {
