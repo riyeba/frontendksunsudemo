@@ -349,7 +349,7 @@ const LandingPage = () => {
 
         {/* Recent Events Section */}
         <section>
-          <h3 className="text-center mb-4" style={{ fontSize: "2rem" }}>
+          <h3 className="text-center mb-5" style={{ fontSize: "2rem" }}>
             Recent Events
           </h3>
           <div className="text-center" data-aos="zoom-in">
@@ -358,7 +358,7 @@ const LandingPage = () => {
         </section>
 
         {/* Upcoming Events Section */}
-        <section>
+        <section className="mt-3">
           <h3 className="text-center mb-4" style={{ fontSize: "2rem" }}>
             Upcoming Events
           </h3>
