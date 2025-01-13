@@ -88,7 +88,7 @@ function MainContent() {
           <Route path="/active" element={<ActiveStudents />} />
           <Route path="/alumni" element={<AlumniStudents />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/board" element={<DashBoard />} />
+          <Route path="/board/" element={<DashBoard />} />
           <Route path="/signactive" element={<SignIn />} />
 
           <Route path="/otp" element={<OTP />} />
