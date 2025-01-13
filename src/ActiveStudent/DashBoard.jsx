@@ -268,6 +268,8 @@ function DashBoard() {
       .get(`https://taiwoakinpennu2.pythonanywhere.com/nsu/${active_id}/`)
       .then((response) => {
         setData(response.data);
+        console.log(response)
+        
       })
       .catch((error) => {
         console.log("Error fetching data:", error);
