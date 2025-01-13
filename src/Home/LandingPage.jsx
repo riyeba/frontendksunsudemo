@@ -291,7 +291,7 @@ const LandingPage = () => {
               >
                 {active2?.name}
               </p>
-              <p className="fs-2" style={{ marginTop: "-0.2rem", fontWeight: "200" }}>
+              <p className="fs-3" style={{ marginTop: "-0.2rem", fontWeight: "500" }}>
                 NSU-KSU President
               </p>
             </div>
@@ -302,7 +302,7 @@ const LandingPage = () => {
         <section id="excopage" className="mb-5">
           <div
             className="d-flex flex-wrap justify-content-center gap-4"
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
           >
             {excodata.map((el) => (
               <div
