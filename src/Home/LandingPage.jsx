@@ -184,19 +184,19 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import RecentEvent from "./Moving";
-import Upcoming from "./UpcomingEvent";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import RecentEvent from "./Moving";
+import Upcoming from "./UpcomingEvent";
 
-function LandingPage() {
+const LandingPage = () => {
   useEffect(() => {
     Aos.init();
   }, []);
 
   const [active, setActive] = useState([]);
   const [excodata, setExcodata] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   // Fetching president's speech data
   useEffect(() => {
@@ -206,50 +206,96 @@ function LandingPage() {
           "https://taiwoakinpennu2.pythonanywhere.com/pres/"
         );
         setActive(response.data);
-        setIsLoading(false);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
-        setIsLoading(false);
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
-  const active2 = active?.length > 0 ? active[active?.length - 1] : null;
-
   // Fetching exco data
   useEffect(() => {
-    const fetchDataExco = async () => {
+    const fetchExcoData = async () => {
       try {
         const response = await axios.get(
           "https://taiwoakinpennu2.pythonanywhere.com/port/"
         );
         setExcodata(response.data);
-        setIsLoading(false);
+        setLoading(false);
       } catch (error) {
-        console.error("Error fetching data:", error);
-        setIsLoading(false);
+        console.error("Error fetching exco data:", error);
+        setLoading(false);
       }
     };
 
-    fetchDataExco();
+    fetchExcoData();
   }, []);
+
+  // Handle Delete request
+  const handleDelete = async (id) => {
+    // Optimistically remove the item from the UI
+    const updatedData = excodata.filter((el) => el.id !== id);
+    setExcodata(updatedData);
+
+    try {
+      await axios.delete(`https://taiwoakinpennu2.pythonanywhere.com/port/${id}/`);
+      alert("Exco deleted successfully!");
+    } catch (error) {
+      console.error("Error deleting exco:", error);
+      alert("Failed to delete exco.");
+
+      // Revert state if the deletion fails
+      setExcodata(excodata);
+    }
+  };
+
+  // Debugging: log the loading state and exco data
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (excodata.length === 0) {
+    return <div>No Exco data available.</div>;
+  }
+
+  const active2 = active?.length > 0 ? active[active?.length - 1] : null;
 
   return (
     <div className="min-vh-100 bg-light">
       <div className="container mt-5">
-        {/* President's Speech Section */}
+        {/* President's Speech Section inside a Card */}
         <section className="mb-5">
           <h3 className="text-center mb-4" style={{ fontSize: "2rem" }}>
             President's Speech
           </h3>
-          <div className="card shadow-sm">
+          <div
+            className="card shadow-sm"
+            style={{
+              padding: "20px",
+              backgroundColor: "#fff",
+              borderRadius: "10px",
+            }}
+          >
             <div className="card-body">
-              <p className="card-text" style={{ fontSize: "18px", textAlign: "justify" }}>
+              <p
+                className="card-text"
+                style={{
+                  fontSize: "18px",
+                  textAlign: "justify",
+                  marginBottom: "20px",
+                }}
+              >
                 {active2?.text}
               </p>
-              <p className="text-success fs-5">{active2?.name}</p>
+              <p
+                className="text-success fs-5"
+                style={{ fontWeight: "500", marginBottom: "0" }}
+              >
+                {active2?.name}
+              </p>
               <p className="fs-5" style={{ marginTop: "-1rem", fontWeight: "500" }}>
                 NSU-KSU President
               </p>
@@ -262,31 +308,63 @@ function LandingPage() {
           <h3 className="text-center mb-4" style={{ fontSize: "2rem" }}>
             Meet Our Excos
           </h3>
-          <div className="row justify-content-center">
+          <div
+            className="d-flex flex-wrap justify-content-center gap-4"
+            data-aos="zoom-in"
+          >
             {excodata.map((el) => (
               <div
-                className="col-md-4 col-sm-6 col-12 mb-4"
                 key={el.id}
-                data-aos="zoom-in"
-                style={{ maxWidth: "18rem" }}
+                style={{
+                  width: "300px",
+                  border: "1px solid #ccc",
+                  borderRadius: "10px",
+                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                  padding: "20px",
+                  backgroundColor: "#fff",
+                  textAlign: "center",
+                }}
               >
-                <div className="card shadow-lg border-0">
+                {el.photo && (
                   <img
                     src={el.photo}
-                    alt={el.name}
-                    className="card-img-top mx-auto"
-                    style={{ width: "8rem", height: "10rem" }}
+                    alt={`${el.name}'s photo`}
+                    style={{
+                      width: "100%",
+                      height: "200px",
+                      objectFit: "cover",
+                      borderRadius: "10px 10px 0 0",
+                      marginBottom: "15px",
+                    }}
                   />
-                  <div className="card-body text-center">
-                    <h5 className="card-title text-success text-uppercase">
-                      {el.exco}
-                    </h5>
-                    <p>{el.name}</p>
-                    <p>Department: {el.department}</p>
-                    <p>Program: {el.degree}</p>
-                    <p>Mobile: {el.mobile}</p>
-                  </div>
-                </div>
+                )}
+                <h3 style={{ fontSize: "1.2em", color: "#333", marginBottom: "10px" }}>
+                  {el.name}
+                </h3>
+                <p style={{ fontSize: "0.9em", color: "#555", margin: "5px 0" }}>
+                  <strong>Department:</strong> {el.department}
+                </p>
+                <p style={{ fontSize: "0.9em", color: "#555", margin: "5px 0" }}>
+                  <strong>Degree:</strong> {el.degree}
+                </p>
+                <p style={{ fontSize: "0.9em", color: "#555", margin: "5px 0" }}>
+                  <strong>Mobile:</strong> {el.mobile}
+                </p>
+                <button
+                  onClick={() => handleDelete(el.id)}
+                  style={{
+                    marginTop: "15px",
+                    padding: "10px 15px",
+                    border: "none",
+                    borderRadius: "5px",
+                    backgroundColor: "#ff4d4f",
+                    color: "#fff",
+                    cursor: "pointer",
+                    fontSize: "0.9em",
+                  }}
+                >
+                  Delete
+                </button>
               </div>
             ))}
           </div>
@@ -314,7 +392,7 @@ function LandingPage() {
       </div>
     </div>
   );
-}
+};
 
 export default LandingPage;
 
