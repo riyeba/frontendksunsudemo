@@ -234,7 +234,7 @@ const LandingPage = () => {
     fetchExcoData();
   }, []);
 
-  // Handle Delete request
+  // Handle Delete request (removed delete button)
   const handleDelete = async (id) => {
     // Optimistically remove the item from the UI
     const updatedData = excodata.filter((el) => el.id !== id);
@@ -266,11 +266,8 @@ const LandingPage = () => {
   return (
     <div className="min-vh-100 bg-light">
       <div className="container mt-5">
-        {/* President's Speech Section inside a Card */}
+        {/* President's Speech Section inside a Card (removed title) */}
         <section className="mb-5">
-          <h3 className="text-center mb-4" style={{ fontSize: "2rem" }}>
-            President's Speech
-          </h3>
           <div
             className="card shadow-sm"
             style={{
@@ -305,9 +302,6 @@ const LandingPage = () => {
 
         {/* Excos Section */}
         <section id="excopage" className="mb-5">
-          <h3 className="text-center mb-4" style={{ fontSize: "2rem" }}>
-            Meet Our Excos
-          </h3>
           <div
             className="d-flex flex-wrap justify-content-center gap-4"
             data-aos="zoom-in"
@@ -350,21 +344,6 @@ const LandingPage = () => {
                 <p style={{ fontSize: "0.9em", color: "#555", margin: "5px 0" }}>
                   <strong>Mobile:</strong> {el.mobile}
                 </p>
-                <button
-                  onClick={() => handleDelete(el.id)}
-                  style={{
-                    marginTop: "15px",
-                    padding: "10px 15px",
-                    border: "none",
-                    borderRadius: "5px",
-                    backgroundColor: "#ff4d4f",
-                    color: "#fff",
-                    cursor: "pointer",
-                    fontSize: "0.9em",
-                  }}
-                >
-                  Delete
-                </button>
               </div>
             ))}
           </div>
