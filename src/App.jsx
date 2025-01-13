@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
-import Home from "./Home/Home";
+
 import NavBar from "./NavBar";
 import NavBarHome from "./NavBarHome";
 import Footer from "./Footer";
@@ -63,6 +63,7 @@ import ForgotOTPf from "./FemaleActive/Editpassverify";
 import DeleteOTPf from "./FemaleActive/Otpdelfemale";
 import DeleteExco from "./Home/DeleteExconow";
 import DeleteExconow from "./Home/DeleteExconow";
+import Homee from "./Home/Homee";
 
 
 // Main Application
@@ -84,7 +85,7 @@ function MainContent() {
       <>
         {shouldHideNavBar? <NavBarHome/> :  <NavBar />}
         <Routes className="min-vh-100 ">
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<Homee />} />
           <Route path="/active" element={<ActiveStudents />} />
           <Route path="/alumni" element={<AlumniStudents />} />
           <Route path="/register" element={<Register />} />
