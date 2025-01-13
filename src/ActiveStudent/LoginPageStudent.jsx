@@ -216,8 +216,8 @@ function SignIn() {
           localStorage.setItem('UserLoginStatus', true);
           localStorage.setItem('active_id', res.data.active_id);
           localStorage.setItem('nav', res.data.nav);
-          window.location.href='/board'
-          // navigate('/board');
+          // window.location.href='/board'
+          navigate('/board');
         } else if (res.data.booll) {
           toast.success("Successfully logged in");
           localStorage.setItem('active_id', res.data.active_idd);
