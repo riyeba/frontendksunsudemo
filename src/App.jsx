@@ -93,7 +93,7 @@ function MainContent() {
           <Route path="/signactive" element={<SignIn />} />
 
           <Route path="/otp" element={<OTP />} />
-          <Route path="/login" element={<SignIn />} />
+          <Route path="/login/" element={<SignIn />} />
           <Route path="/sboard/:member_id" element={<SecondDashBoard />} />
           <Route path="/password" element={<Forgot />} />
           <Route path="/updatepassword" element={<EditPass />} />

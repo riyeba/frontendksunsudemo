@@ -301,7 +301,7 @@ function DashBoard() {
 
   const LogOut = () => {
     localStorage.removeItem("UserLoginStatus");
-    window.location.href = "/login/";
+     navigate("/login/")
   };
 
   const goForm = (id, el) => {
