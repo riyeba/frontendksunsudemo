@@ -180,7 +180,6 @@
 // }
 
 // export default LandingPage;
-
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Aos from "aos";
@@ -233,6 +232,24 @@ const LandingPage = () => {
     fetchExcoData();
   }, []);
 
+  // Handle Delete request (removed delete button)
+  const handleDelete = async (id) => {
+    // Optimistically remove the item from the UI
+    const updatedData = excodata.filter((el) => el.id !== id);
+    setExcodata(updatedData);
+
+    try {
+      await axios.delete(`https://taiwoakinpennu2.pythonanywhere.com/port/${id}/`);
+      alert("Exco deleted successfully!");
+    } catch (error) {
+      console.error("Error deleting exco:", error);
+      alert("Failed to delete exco.");
+
+      // Revert state if the deletion fails
+      setExcodata(excodata);
+    }
+  };
+
   // Debugging: log the loading state and exco data
   if (loading) {
     return <div>Loading...</div>;
@@ -252,7 +269,7 @@ const LandingPage = () => {
           <div
             className="card shadow-sm"
             style={{
-              padding: "15px", // Reduced padding
+              padding: "20px",
               backgroundColor: "#fff",
               borderRadius: "10px",
             }}
@@ -261,29 +278,20 @@ const LandingPage = () => {
               <p
                 className="card-text"
                 style={{
-                  fontSize: "16px", // Reduced font size for better fit
+                  fontSize: "18px",
                   textAlign: "justify",
-                  marginBottom: "5px", // Reduced margin between text
+                  marginBottom: "20px",
                 }}
               >
                 {active2?.text}
               </p>
               <p
                 className="text-success fs-5"
-                style={{
-                  fontWeight: "500",
-                  marginBottom: "0", // Reduced margin
-                }}
+                style={{ fontWeight: "500", marginBottom: "0" }}
               >
                 {active2?.name}
               </p>
-              <p
-                className="fs-2"
-                style={{
-                  marginTop: "-0.3rem", // Reduced margin top for better fit
-                  fontWeight: "400",
-                }}
-              >
+              <p className="fs-2" style={{ marginTop: "-0.2rem", fontWeight: "200" }}>
                 NSU-KSU President
               </p>
             </div>
@@ -304,7 +312,7 @@ const LandingPage = () => {
                   border: "1px solid #ccc",
                   borderRadius: "10px",
                   boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                  padding: "15px", // Reduced padding
+                  padding: "20px",
                   backgroundColor: "#fff",
                   textAlign: "center",
                 }}
@@ -318,20 +326,20 @@ const LandingPage = () => {
                       height: "200px",
                       objectFit: "cover",
                       borderRadius: "10px 10px 0 0",
-                      marginBottom: "10px", // Reduced margin
+                      marginBottom: "15px",
                     }}
                   />
                 )}
-                <h3 style={{ fontSize: "1.2em", color: "#333", marginBottom: "5px" }}>
+                <h3 style={{ fontSize: "1.2em", color: "#333", marginBottom: "10px" }}>
                   {el.name}
                 </h3>
-                <p style={{ fontSize: "0.9em", color: "#555", margin: "3px 0" }}>
+                <p style={{ fontSize: "0.9em", color: "#555", margin: "5px 0" }}>
                   <strong>Department:</strong> {el.department}
                 </p>
-                <p style={{ fontSize: "0.9em", color: "#555", margin: "3px 0" }}>
+                <p style={{ fontSize: "0.9em", color: "#555", margin: "5px 0" }}>
                   <strong>Degree:</strong> {el.degree}
                 </p>
-                <p style={{ fontSize: "0.9em", color: "#555", margin: "3px 0" }}>
+                <p style={{ fontSize: "0.9em", color: "#555", margin: "5px 0" }}>
                   <strong>Mobile:</strong> {el.mobile}
                 </p>
               </div>
