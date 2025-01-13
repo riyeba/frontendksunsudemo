@@ -449,7 +449,7 @@ const LandingPage = () => {
   }
 
   if (excodata.length === 0) {
-    return <div>No Exco data available.</div>;
+    return <div>Please wait....</div>;
   }
 
   const active2 = active?.length > 0 ? active[active?.length - 1] : null;
