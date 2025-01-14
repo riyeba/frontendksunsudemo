@@ -47,7 +47,8 @@ console.log(active_iddd)
 
   const LogOut = () => {
     localStorage.removeItem("UserLoginStatus");
-    window.location.href = "/login";
+    navigate("/login")
+    
   };
 
   const goForm = (id, el) => {
@@ -138,13 +139,13 @@ console.log(active_iddd)
                   </div>
                 </div>
               )}
-              <Link
+              <button
                 onClick={LogOut}
                 className="list-group-item list-group-item-action text-danger mt-4 d-flex gap-2 fw-bold fs-6 position-absolute bottom-0 end-0 border-top"
               >
                 <i className="bi bi-box-arrow-right text-danger"></i>
                 Sign Out
-              </Link>
+              </button>
             </div>
           </aside>
           <section className="col-md-9 w-75">
