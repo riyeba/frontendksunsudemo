@@ -458,7 +458,7 @@ const LandingPage = () => {
     <div className="min-vh-100 bg-light">
       <div className="container mt-5">
         {/* President's Speech Section inside a Card */}
-        <section className="mb-5">
+        {/* <section className="mb-5">
           <div
             className="card shadow-sm"
             style={{
@@ -489,7 +489,26 @@ const LandingPage = () => {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
+        <h3 className="" style={{ fontSize: "2rem" }}>
+          President Speech
+        </h3>
+        <div className="card ">
+          {/* <h5 className="card-header">Featured</h5> */}
+          <div className="card-body ">
+            {/* <h5 className="card-title">Special title treatment</h5> */}
+            <p
+              className="card-text  "
+              style={{ fontSize: "18px", textAlign: "justify" }}
+            >
+             {active2?.text}
+            </p>
+            <p className="text-success fs-5  " >
+              {active2?.name}
+            </p>
+            <p className="fs-5 " style={{marginTop:"-1rem", fontWeight:'500'}}>NSU-KSU President</p>
+          </div>
+        </div>
 
         {/* Excos Section */}
         <section id="excopage" className="mb-5">
@@ -527,6 +546,9 @@ const LandingPage = () => {
                 <h3 style={{ fontSize: "1.2em", color: "#333", marginBottom: "10px" }}>
                   {el.name}
                 </h3>
+                <p style={{ fontSize: "0.9em", color: "#555", margin: "5px 0" }}>
+                  <strong>Post:</strong> {el.exco}
+                </p>
                 <p style={{ fontSize: "0.9em", color: "#555", margin: "5px 0" }}>
                   <strong>Department:</strong> {el.department}
                 </p>
