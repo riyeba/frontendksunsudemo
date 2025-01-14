@@ -85,11 +85,11 @@ function MainContent() {
   const shouldHideNavBar = hideNavBarRoutes.includes(location.pathname);
 
   return (
-    <div>
+    <div className="min-vh-100 ">
       <>
       <ScrollTop />
         {shouldHideNavBar? <NavBarHome/> :  <NavBar />}
-        <Routes className="min-vh-100 ">
+        <Routes > 
           <Route path="/home" element={<Homee />} />
           <Route path="/active" element={<ActiveStudents />} />
           <Route path="/alumni" element={<AlumniStudents />} />
