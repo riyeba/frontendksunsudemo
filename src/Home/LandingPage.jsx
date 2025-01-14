@@ -310,11 +310,11 @@ const LandingPage = () => {
           </section>
 
           {/* Explore More Button - Placed after President's Speech */}
-          <div className="text-center mt-5">
+          {/* <div className="text-center mt-5">
             <Link to="/login">
-              <button className="btn btn-primary btn-lg">Explore More</button>
+              <button className="btn btn-primary btn-lg">Join the Community</button>
             </Link>
-          </div>
+          </div> */}
 
           {/* Excos Section */}
           <section id="excopage" className="mb-5">
@@ -397,6 +397,11 @@ const LandingPage = () => {
               <Upcoming />
             </div>
           </section>
+          <div className="text-center mt-5">
+            <Link to="/home">
+              <button className="btn btn-primary btn-lg">Join the Community</button>
+            </Link>
+          </div>
         </div>
       )}
     </div>
