@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 const DeleteExconow = () => {
   const [excodata, setExcoData] = useState([]);
@@ -34,7 +35,7 @@ const DeleteExconow = () => {
 
     try {
       await axios.delete(`https://taiwoakinpennu2.pythonanywhere.com/port/${id}/`);
-      alert("Exco deleted successfully!");
+      toast.success("Exco deleted successfully!");
     } catch (error) {
       console.error("Error deleting exco:", error);
       alert("Failed to delete exco.");

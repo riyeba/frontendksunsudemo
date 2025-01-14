@@ -5,6 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import RecentEvent from "./Moving";
 import Upcoming from "./UpcomingEvent";
+import toast from "react-hot-toast";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -59,7 +60,7 @@ const LandingPage = () => {
 
     try {
       await axios.delete(`https://taiwoakinpennu2.pythonanywhere.com/port/${id}/`);
-      alert("Exco deleted successfully!");
+      toast.success("Exco deleted successfully!");
     } catch (error) {
       console.error("Error deleting exco:", error);
       alert("Failed to delete exco.");
@@ -82,7 +83,7 @@ const LandingPage = () => {
 
   return (
     <div className="min-vh-100 bg-light">
-      <div className="container mt-5">
+      {loading ? "Loading..." : <div className="container mt-5">
         {/* President's Speech Section inside a Card */}
         <section className="mb-5">
           <div
@@ -189,7 +190,7 @@ const LandingPage = () => {
             <Upcoming />
           </div>
         </section>
-      </div>
+      </div>}
     </div>
   );
 };
