@@ -182,13 +182,13 @@ function SignInAl() {
           <p>
             Need an account?{" "}
             <Link to="/registeral" className="text-decoration-underline cursor-pointer text-dark">
-              Sign up
+              <strong>Sign up</strong>
             </Link>
           </p>
           <p>
             Forgot Password?{" "}
             <Link to="/alpassword" className="text-decoration-underline cursor-pointer text-dark">
-              Reset it
+              <stron>Reset it</stron>
             </Link>
           </p>
         </div>
