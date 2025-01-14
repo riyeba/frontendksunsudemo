@@ -64,7 +64,8 @@ import DeleteOTPf from "./FemaleActive/Otpdelfemale";
 import DeleteExco from "./Home/DeleteExconow";
 import DeleteExconow from "./Home/DeleteExconow";
 import Homee from "./Home/Homee";
-import ScrollToTop from "./ScrollTopTop";
+import ScrollTop from "./ScrollTop";
+
 
 
 
@@ -86,7 +87,7 @@ function MainContent() {
   return (
     <div>
       <>
-      <ScrollToTop />
+      <ScrollTop />
         {shouldHideNavBar? <NavBarHome/> :  <NavBar />}
         <Routes className="min-vh-100 ">
           <Route path="/home" element={<Homee />} />
