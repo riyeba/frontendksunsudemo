@@ -64,12 +64,15 @@ import DeleteOTPf from "./FemaleActive/Otpdelfemale";
 import DeleteExco from "./Home/DeleteExconow";
 import DeleteExconow from "./Home/DeleteExconow";
 import Homee from "./Home/Homee";
+import ScrollToTop from "./ScrollTopTop";
+
 
 
 // Main Application
 function App() {
   return (
     <BrowserRouter>
+    
       <MainContent />
     </BrowserRouter>
   );
@@ -83,6 +86,7 @@ function MainContent() {
   return (
     <div>
       <>
+      <ScrollToTop />
         {shouldHideNavBar? <NavBarHome/> :  <NavBar />}
         <Routes className="min-vh-100 ">
           <Route path="/home" element={<Homee />} />
@@ -93,7 +97,7 @@ function MainContent() {
           <Route path="/signactive" element={<SignIn />} />
 
           <Route path="/otp" element={<OTP />} />
-          <Route path="/login/" element={<SignIn />} />
+          <Route path="/login" element={<SignIn />} />
           <Route path="/sboard/:member_id" element={<SecondDashBoard />} />
           <Route path="/password" element={<Forgot />} />
           <Route path="/updatepassword" element={<EditPass />} />
