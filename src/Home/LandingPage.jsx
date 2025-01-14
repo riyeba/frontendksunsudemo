@@ -472,7 +472,7 @@ const LandingPage = () => {
                 className="card-text"
                 style={{
                   fontSize: "18px",
-                  textAlign: "justify",
+                  // textAlign: "justify",
                   marginBottom: "20px",
                 }}
               >
