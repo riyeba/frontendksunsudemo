@@ -70,7 +70,7 @@ function Homee() {
                 data-aos="fade-up"
                 data-aos-delay="400" // Shorter delay
               >
-                Sign In (Active Student)
+                Student
               </button>
             </Link>
           </div>
@@ -81,7 +81,7 @@ function Homee() {
                 data-aos="fade-up"
                 data-aos-delay="500" // Slightly after the first button
               >
-                Sign In (Alumni)
+                Alumni
               </button>
             </Link>
           </div>
