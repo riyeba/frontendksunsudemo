@@ -146,7 +146,7 @@ function SignInAl() {
           <div className="alert alert-info">
             <strong>Login Credentials</strong><br />
             To login as alumni: <strong>email: moriyebas@gmail.com</strong> and <strong>password: 123457</strong><br />
-            To Login as alumni, please go to the student section. You can also sign up as alumni by entering a valid email address.
+            To login as admin, please go to the student section. You can also sign up as alumni by entering a valid email address.
           </div>
 
           <div className="mb-3">
@@ -188,7 +188,7 @@ function SignInAl() {
           <p>
             Forgot Password?{" "}
             <Link to="/alpassword" className="text-decoration-underline cursor-pointer text-dark">
-              <stron>Reset it</stron>
+              <strong>Reset it</strong>
             </Link>
           </p>
         </div>
