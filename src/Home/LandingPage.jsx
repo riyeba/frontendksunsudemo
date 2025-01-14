@@ -581,18 +581,19 @@ const LandingPage = () => {
           </section>
 
           {/* "Join the Community" Button */}
-          <div className="text-center mt-5">
+          <div className="text-center mt-5" style={{ marginBottom: "30px" }}>
             <Link to="/home">
               <button
-                className="btn btn-primary btn-lg"
+                className="btn btn-success btn-lg"
                 style={{
-                  backgroundColor: "#007bff",
-                  borderColor: "#007bff",
+                  backgroundColor: "#8bc34a", // Light green background
+                  borderColor: "#8bc34a",
                   padding: "15px 30px",
                   fontSize: "1.25rem",
                   fontWeight: "600",
                   borderRadius: "30px",
                   transition: "all 0.3s ease-in-out",
+                  marginBottom: "50px", // Ensure some space between button and footer
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.transform = "scale(1.05)";
