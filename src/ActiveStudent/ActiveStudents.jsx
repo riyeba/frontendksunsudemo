@@ -16,7 +16,7 @@ function ActiveStudents() {
         const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/nsu/")
         setActive(response.data);
         setIsLoading(false);
-        
+        console.log(response);
       } catch (error) {
         // Handle errors if needed
         console.error("Error fetching data:", error);

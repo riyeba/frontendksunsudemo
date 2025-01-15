@@ -52,7 +52,7 @@ function AlDashBoard() {
 
   function LogOut() {
     localStorage.removeItem("UserLoginStatu");
-    window.location.href = "/loginal";
+     navigate("/loginal")
   }
 
   
@@ -151,14 +151,14 @@ function AlDashBoard() {
                 </div>
               )}
               <div style={{ marginTop: "8rem" }}>
-                <Link
+                <button
                   onClick={() => LogOut()}
                   className="list-group-item list-group-item-action text-danger  d-flex gap-2 fw-bold fs-6 position-absolute bottom-0 end-0 "
                   
                 >
                   <i className="bi bi-box-arrow-right text-danger "></i>
                   Sign Out
-                </Link>
+                </button>
               </div>
             </div>
           </div>

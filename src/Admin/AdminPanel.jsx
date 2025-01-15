@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, Navigate, NavLink } from "react-router-dom";
 
 function SiteAdmin() {
   const [activeal, setActiveal] = useState([]);
@@ -32,7 +32,10 @@ function SiteAdmin() {
     fetchData();
   }, []);
 
-
+  function LogOut() {
+    localStorage.removeItem('UserLoginStatus');
+    Navigate('/login')
+  }
   
 
   useEffect(() => {
@@ -147,10 +150,10 @@ function SiteAdmin() {
                 </Link>
               </div>
 
-              <Link className="list-group-item list-group-item-action text-danger mt-4 d-flex gap-2 fw-bold fs-6 position-absolute bottom-0 end-0 border-top">
+              <button className="list-group-item list-group-item-action text-danger mt-4 d-flex gap-2 fw-bold fs-6 position-absolute bottom-0 end-0 border-top" onClick={LogOut}>
                 <i className="bi bi-box-arrow-right text-danger "></i>
                 Sign Out
-              </Link>
+              </button>
             </div>
           </div>
         </aside>

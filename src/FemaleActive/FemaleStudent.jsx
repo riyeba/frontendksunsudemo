@@ -46,7 +46,7 @@ console.log(active_iddd)
   };
 
   const LogOut = () => {
-    localStorage.removeItem("UserLoginStatus");
+    localStorage.removeItem("UserLoginStatuf");
     navigate("/login")
     
   };
