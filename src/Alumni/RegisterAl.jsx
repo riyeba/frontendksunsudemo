@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import TransparentSpinner from "../Spinner";
-import { Navigate } from "react-router";
+import { useNavigate } from "react-router";
 
 function RegisterAl() {
   const [show, setShow] = useState(true);
@@ -20,6 +20,7 @@ function RegisterAl() {
   const [loading, setLoading] = useState(false);
 
   async function Submit() {
+     const navigate = useNavigate();
     setLoading(true);
     const verify_token = Math.floor(100000 + Math.random() * 900000);
     const formdata = new FormData();
@@ -45,7 +46,7 @@ function RegisterAl() {
       );
       if (response.status === 201) {
         toast.success("data successfully uploaded");
-        Navigate("/otpal")
+        navigate("/otpal")
       } else {
         setLoading(false);
       }

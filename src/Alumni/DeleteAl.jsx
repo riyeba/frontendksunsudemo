@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 function AlDeleteOTP() {
  const[loading,setLoading]=useState(false)
   const [otp_digit, setOtp] = useState();
-  
+   const navigate = useNavigate();
 
 
 function LogOut(){
     localStorage.removeItem('UserLoginStatu')
-    window.location.href='/'
+    navigate('/')
     
   }
  

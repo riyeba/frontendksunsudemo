@@ -2,13 +2,13 @@
 import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function SignInAl() {
   const [auth_email, setauth_email] = useState();
   const [auth_password, setauth_password] = useState();
   // const[show,setShow]=useState(true)
-
+  const navigate = useNavigate();
   function handleSubmit(e) {
     e.preventDefault();
 
@@ -25,7 +25,7 @@ function SignInAl() {
           toast.success("Successfully logged in");
           localStorage.setItem("UserLoginStatu", true);
           localStorage.setItem("active_id", res.data.active_id);
-          Navigate("/boardal")
+          navigate("/boardal")
         }
       })
       .catch((error) => {
