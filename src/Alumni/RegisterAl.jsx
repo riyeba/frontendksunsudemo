@@ -44,7 +44,7 @@ function RegisterAl() {
       );
       if (response.status === 201) {
         toast.success("data successfully uploaded");
-        window.location.href = "/otpal";
+        navigate("/otpal")
       } else {
         setLoading(false);
       }
