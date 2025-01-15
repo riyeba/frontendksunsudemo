@@ -5,6 +5,7 @@ import TransparentSpinner from "../Spinner";
 import { useNavigate } from "react-router";
 
 function RegisterAl() {
+  const navigate = useNavigate();
   const [show, setShow] = useState(true);
   const [Surname, setSurname] = useState();
   const [First_name, setFirst_name] = useState();
@@ -20,7 +21,7 @@ function RegisterAl() {
   const [loading, setLoading] = useState(false);
 
   async function Submit() {
-     const navigate = useNavigate();
+     
     setLoading(true);
     const verify_token = Math.floor(100000 + Math.random() * 900000);
     const formdata = new FormData();
@@ -247,7 +248,7 @@ function RegisterAl() {
             </div>
 
             <button type="submit" className="btn mb-3 btn-success">
-              Submit
+              {loading? "loading..." : 'Submit'}
             </button>
           </div>
         </div>
