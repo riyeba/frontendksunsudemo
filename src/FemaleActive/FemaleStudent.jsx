@@ -94,7 +94,7 @@ console.log(active_iddd)
             <div className="list-group list-group-flush">
               <div className="list-group-item list-group-item-action d-flex gap-2">
                 <i className="bi bi-house-door-fill"></i>
-                <Link to="#" className="text-black text-decoration-none">
+                <Link to="/" className="text-black text-decoration-none">
                   Dashboard
                 </Link>
               </div>

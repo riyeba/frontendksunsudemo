@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 import TransparentSpinner from "../Spinner";
+import { Navigate } from "react-router";
 
 function RegisterAl() {
   const [show, setShow] = useState(true);
@@ -44,7 +45,7 @@ function RegisterAl() {
       );
       if (response.status === 201) {
         toast.success("data successfully uploaded");
-        navigate("/otpal")
+        Navigate("/otpal")
       } else {
         setLoading(false);
       }

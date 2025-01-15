@@ -92,7 +92,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 
 function DeleteOTP() {
@@ -104,7 +104,8 @@ function DeleteOTP() {
 
 function LogOut(){
     localStorage.removeItem('UserLoginStatus')
-    window.location.href='/'
+    // window.location.href='/'
+    Navigate('/')
    
   }
  
