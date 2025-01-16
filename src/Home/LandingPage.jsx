@@ -419,6 +419,7 @@ import RecentEvent from "./Moving";
 import Upcoming from "./UpcomingEvent";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom"; // Import Link for navigation
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const LandingPage = () => {
   useEffect(() => {
@@ -585,7 +586,7 @@ const LandingPage = () => {
                   }}
                 >
                   {el.photo && (
-                    <img
+                    <LazyLoadImage
                       src={el.photo}
                       alt={`${el.name}'s photo`}
                       style={{
