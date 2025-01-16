@@ -518,7 +518,7 @@ const LandingPage = () => {
             </div>
           </section> */}
 
-<section className=" " style={{marginTop:'-4rem', marginBottom:"5rem"}} data-aos="zoom-in">
+<section className=" " style={{marginTop:'-4rem', marginBottom:"-1rem"}} data-aos="zoom-in">
       <div
         className="d-flex flex-column flex-md-row justify-content-between p-4 bg-white rounded-3"
         style={{

@@ -2,13 +2,21 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const ScrollTop = () => {
-  const location = useLocation(); // This will track route changes
+  const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  }, [location]); // This runs whenever the location changes (i.e., route change)
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
 
-  return null; // This component doesn't render anything
+    document.documentElement.style.scrollBehavior = "smooth";
+
+    return () => {
+      document.documentElement.style.scrollBehavior = "auto";
+    };
+  }, [location]);
+
+  return null;
 };
 
 export default ScrollTop;
