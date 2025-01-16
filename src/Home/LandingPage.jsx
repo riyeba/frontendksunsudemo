@@ -468,24 +468,32 @@ const LandingPage = () => {
   const active2 = active?.length > 0 ? active[active?.length - 1] : null;
 
   return (
-    <div className="min-vh-100 bg-light">
+    <div className="min-vh-100 " >
       {loading ? (
         "Loading..."
       ) : (
-        <div className="container mt-5">
+        <div className="" style={{marginTop:"10rem"}}>
           {/* President's Speech Section inside a Card */}
-          <section className="mb-5">
+          {/* <section className="mb-5">
             <div
-              className="card shadow-sm"
+              className="d-flex flex-row"
+              
               style={{
                 padding: "20px",
                 backgroundColor: "#fff",
                 borderRadius: "10px",
+
+                
               }}
             >
-              <div className="card-body">
+              <div >
+                <div style={{marginBottom:"2rem"}}>
+                  <h1><span className="text-success">NIGERIAN </span>STUDENTS</h1>
+                  <h2 className="">KING SAUD <span className="text-success">UNIVERSITY</span> </h2>
+                  <h3>Riyadh , Saudi Arabia</h3>
+                </div>
                 <p
-                  className="card-text"
+                  className=""
                   style={{
                     fontSize: "18px",
                     textAlign: "justify",
@@ -504,12 +512,61 @@ const LandingPage = () => {
                   NSU-KSU President
                 </p>
               </div>
+              <div>
+                <img src="public\nsulogo.jpg" alt='pic' style={{width:'25rem'}}/>
+              </div>
             </div>
-          </section>
+          </section> */}
+
+<section className=" " style={{marginTop:'-4rem', marginBottom:"10rem"}} data-aos="zoom-in">
+      <div
+        className="d-flex flex-column flex-md-row justify-content-between p-4 bg-white rounded-3"
+        style={{
+          backgroundColor: "#fff",
+          borderRadius: "10px",
+        }}
+      >
+        <div className="flex-column mb-4 mb-md-0 w-100">
+          <div className="mb-4">
+            <h1>
+              <span className="text-success">NIGERIAN </span>STUDENTS
+            </h1>
+            <h2>
+              KING SAUD <span className="text-success">UNIVERSITY</span>
+            </h2>
+            <h3 className="fw-normal">Riyadh, Saudi Arabia</h3>
+          </div>
+
+          <p
+            
+            style={{
+              fontSize: "18px",
+              marginBottom: "20px",
+               opacity: 0.9 
+              
+            }}
+          >
+            {active2?.text}
+           
+          </p>
+
+          <p className="text-success fs-5" style={{ fontWeight: "500", marginBottom: "0" }}>
+            {active2?.name}
+          </p>
+          <p className="fs-3" style={{ marginTop: "-0.2rem", fontWeight: "500" }}>
+            NSU-KSU President
+          </p>
+        </div>
+
+        <div className="d-flex justify-content-center align-items-center container " style={{marginTop:"-205px"}}>
+        <img src="https://static.vecteezy.com/system/resources/previews/012/352/057/original/graduation-hat-illustration-in-the-flat-style-graduation-cap-isolated-on-the-transparent-background-vector.jpg" alt="NSU Logo"  style={{maxWidth: "600px", width: "100%",transition: "transform 0.3s ease-in-out",objectFit: "contain", height:"700px"}}/>
+        </div>
+      </div>
+    </section>
 
           {/* Excos Section */}
-          <section id="excopage" className="mb-5">
-            <h3 className="text-center" style={{ fontSize: "2rem", marginBottom: "20px" }}>
+          <section id="excopage" style={{marginBottom:'10rem'}} data-aos="zoom-in">
+            <h3 className="text-center" style={{ fontSize: "2rem", marginBottom: "50px" }}>
               Meet Our Excos
             </h3>
             <div className="d-flex flex-wrap justify-content-center gap-4">
@@ -561,8 +618,8 @@ const LandingPage = () => {
           </section>
 
           {/* Recent Events Section */}
-          <section className="mb-5">
-            <h3 className="text-center" style={{ fontSize: "2rem", marginBottom: "20px" }}>
+          <section style={{marginBottom:'10rem'}} data-aos="zoom-in">
+            <h3 className="text-center" style={{ fontSize: "2rem", marginBottom: "40px" }}>
               Recent Events
             </h3>
             <div className="text-center">
@@ -571,11 +628,11 @@ const LandingPage = () => {
           </section>
 
           {/* Upcoming Events Section */}
-          <section className="mb-5">
-            <h3 className="text-center" style={{ fontSize: "2rem", marginBottom: "20px" }}>
+          <section  style={{marginBottom:'10rem'}} data-aos="zoom-in">
+            <h3 className="text-center" style={{ fontSize: "2rem", marginBottom: "40px" }}>
               Upcoming Events
             </h3>
-            <div className="text-center">
+            <div className="text-center" style={{ fontSize: "2rem", marginBottom: "40px" }}>
               <Upcoming />
             </div>
           </section>
