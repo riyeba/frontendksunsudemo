@@ -127,7 +127,7 @@ const LandingPage = () => {
                 >
                   
                     <img
-                      src={el.photo}
+                      src={el?.photo}
                       alt={el.name}
                       style={{
                         width: "100%",
