@@ -2,10 +2,11 @@
 import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
-import { Link, useLocation} from "react-router-dom";
+import { Link, useLocation, useNavigate} from "react-router-dom";
 
 function AlEditProfile() {
   const location = useLocation();
+
   const id = location?.state?.id;
   const el = location?.state?.el;
 
@@ -25,7 +26,7 @@ function AlEditProfile() {
 
   async function Submit() {
    
-  
+   const navigate = useNavigate();
     const formdata = new FormData();
 
     formdata.append("Surname", Surname);
@@ -50,7 +51,8 @@ function AlEditProfile() {
             if (response.status === 200) {
               toast.success("data successfully updated");
               console.log(response.data);
-              window.location.href = "/boardal";
+              // window.location.href = "/boardal";
+              navigate("/boardal")
             }
           });
       } catch (error) {
