@@ -9,7 +9,7 @@ import RecentEvent from "./Moving";
 import Upcoming from "./UpcomingEvent";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom"; // Import Link for navigation
-import { LazyLoadImage } from "react-lazy-load-image-component";
+
 
 
 const LandingPage = () => {
@@ -21,42 +21,24 @@ const LandingPage = () => {
   const [excodata, setExcodata] = useState([]);
   const [loading, setLoading] = useState(true);
   const[error,setError]=useState(null)
+  const [loading1, setLoading1] = useState(true);
+  const[error1,setError1]=useState(null)
 
-  // Fetching president's speech data
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "https://taiwoakinpennu2.pythonanywhere.com/pres/"
-        );
-        setActive(response.data);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      }
-    };
+ 
 
-    fetchData();
-  }, []);
+  
 
-  // Fetching exco data
-  // useEffect(() => {
-  //   const fetchExcoData = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         "https://taiwoakinpennu2.pythonanywhere.com/port/"
-  //       );
-  //       setExcodata(response.data);
-  //       setLoading(false);
-  //     } catch (error) {
-  //       console.error("Error fetching exco data:", error);
-  //       setLoading(false);
-  //     }
-  //   };
 
-  //   fetchExcoData();
-  // }, []);
+
+  useEffect(()=>{
+   axios("https://taiwoakinpennu2.pythonanywhere.com/pres/").then((res)=>{
+    setActive(res.data)
+   }).catch((error)=>{
+    setError1(error)
+   }).finally(()=>{
+    setLoading1(false)
+   })
+  })
 
   useEffect(()=>{
     axios("https://taiwoakinpennu2.pythonanywhere.com/port/").then((response)=>{
@@ -72,9 +54,9 @@ const LandingPage = () => {
   const active2 = active?.length > 0 ? active[active?.length - 1] : null;
 
   return (
-    <div className="min-vh-100 " >
-      {loading ? (
-        "Loading..."
+    <div className="min-vh-100 "  style={{ scrollBehavior: 'smooth', overflow: 'auto' }}>
+      {loading && loading1 ? (
+        <h1 style={{ display: 'grid', height: '100vh', placeItems: 'center' }} className="text-success">Welcome to NSU-KSU</h1>
       ) : (
         <div className="" style={{marginTop:"10rem"}}>
 <section className=" " style={{marginTop:'-4rem', marginBottom:""}} data-aos="zoom-in">
@@ -146,7 +128,7 @@ const LandingPage = () => {
                   
                     <img
                       src={el.photo}
-                      alt={`${el.name}'s photo`}
+                      alt={el.name}
                       style={{
                         width: "100%",
                         height: "200px",
