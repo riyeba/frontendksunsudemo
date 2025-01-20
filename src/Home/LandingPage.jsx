@@ -124,7 +124,7 @@ const LandingPage = () => {
     </section>
 
           {/* Excos Section */}
-          <section id="excopage" style={{marginBottom:'10rem'}} data-aos="zoom-in">
+          <section id="excopage" style={{marginBottom:'10rem'}} >
             <h3 className="text-center" style={{ fontSize: "2rem", marginBottom: "50px" }}>
               Meet Our Excos
             </h3>
@@ -144,7 +144,7 @@ const LandingPage = () => {
                   }}
                 >
                   
-                    <LazyLoadImage
+                    <img
                       src={el.photo}
                       alt={`${el.name}'s photo`}
                       style={{
