@@ -125,7 +125,7 @@ const LandingPage = () => {
 
           {/* Excos Section */}
           <section id="excopage" style={{marginBottom:'10rem'}} >
-            <h3 className="text-center" style={{ fontSize: "3rem", marginBottom: "50px" }}>
+            <h3 className="text-center" style={{ fontSize: "2rem", marginBottom: "50px" }}>
               Meet Our Excos
             </h3>
             <div className="d-flex flex-wrap justify-content-center gap-4">
@@ -178,7 +178,7 @@ const LandingPage = () => {
 
           {/* Recent Events Section */}
           <section style={{marginBottom:'10rem'}} data-aos="zoom-in">
-            <h3 className="text-center" style={{ fontSize: "3rem", marginBottom: "40px" }}>
+            <h3 className="text-center" style={{ fontSize: "2rem", marginBottom: "40px" }}>
               Recent Events
             </h3>
             <div className="text-center">
@@ -188,7 +188,7 @@ const LandingPage = () => {
 
           {/* Upcoming Events Section */}
           <section  style={{marginBottom:'10rem'}} data-aos="zoom-in">
-            <h3 className="text-center" style={{ fontSize: "3rem", marginBottom: "40px" }}>
+            <h3 className="text-center" style={{ fontSize: "2rem", marginBottom: "40px" }}>
               Upcoming Events
             </h3>
             <div className="text-center" style={{ fontSize: "2rem", marginBottom: "40px" }}>
