@@ -92,17 +92,17 @@ function NavBar() {
             )}
 
             {UserLoginStatus === 'true' ? "" : (
-              <button className="nav-link active text-white fs-6" onClick={() => handleSmoothScroll('excopage')}>Excos</button>
+              <li><button className="nav-link active text-white fs-6" onClick={() => handleSmoothScroll('excopage')}>Excos</button></li>
             )}
 
             {UserLoginStatus === 'true' ? "" : (
               <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a className="nav-link dropdown-toggle text-white"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Events
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><button className="dropdown-item" onClick={() => handleSmoothScroll('recentpage')}>Recent</button></li>
-                  <li><button className="dropdown-item"  onClick={() => handleSmoothScroll('upcomingpage')}>Upcoming</button></li>
+                  <button className="dropdown-item" onClick={() => handleSmoothScroll('recentpage')}>Recent</button>
+                  <button className="dropdown-item"  onClick={() => handleSmoothScroll('upcomingpage')}>Upcoming</button>
                 </ul>
               </li>
             )}
