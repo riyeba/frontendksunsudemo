@@ -359,7 +359,7 @@ function NavBar() {
                   Active Student
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li onClick={() => LogOut()}><Link className="dropdown-item text-dark fs-5" href="#">LogOut</Link></li>
+                  <li onClick={() => LogOut()}><Link className="dropdown-item text-dark fs-5" href="#"></Link></li>
                 </ul>
               </li>
             ) : ""}
@@ -371,7 +371,7 @@ function NavBar() {
                     Alumni
                   </a>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li onClick={() => LogOutal()}><Link className="dropdown-item" href="#">LogOut</Link></li>
+                    <li onClick={() => LogOutal()}><Link className="dropdown-item" href="#"></Link></li>
                   </ul>
                 </li>
               </div>
