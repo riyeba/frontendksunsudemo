@@ -8,8 +8,9 @@ import { HashLink as Link } from "react-router-hash-link";
 
 const UserLoginStatus = localStorage.getItem('UserLoginStatus');
 const UserLoginStatu = localStorage.getItem('UserLoginStatu');
-const navigate=useNavigate()
+
 function NavBar() {
+  const navigate = useNavigate();
   const [active, setActive] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isCollapsed, setIsCollapsed] = useState(true);  // State to track navbar collapse
