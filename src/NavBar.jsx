@@ -4,6 +4,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { useNavigate } from "react-router";
 import { HashLink as Link } from "react-router-hash-link";
 
 
@@ -16,6 +17,7 @@ function NavBar() {
   const [userLoginStatu, setUserLoginStatu] = useState(null);
 // const UserLoginStatus = localStorage.getItem('UserLoginStatus');
 // const UserLoginStatu = localStorage.getItem('UserLoginStatu');
+const navigate=useNavigate()
 
   useEffect(() => {
     
@@ -44,12 +46,12 @@ function NavBar() {
 
   function LogOut() {
     localStorage.removeItem('UserLoginStatus');
-    window.location.href = '/login';
+    navigate('/login');
   }
 
   function LogOutal() {
     localStorage.removeItem('userLoginStatu');
-    window.location.href = '/loginal';
+   navigate('/loginal');
   }
 
   const handleSmoothScroll = (sectionId) => {
