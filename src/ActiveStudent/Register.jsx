@@ -33,7 +33,7 @@ function Register() {
 
   const validateForm = () => {
    
-    if ( Gender === "select" || !Surname || !First_name || Degree === "select"  || !College || !auth_email || !auth_password  || FamilyinSaudi==="Select") {
+    if ( Gender === "select"  || !First_name || Degree === "select"  || !auth_email || !auth_password  || FamilyinSaudi==="Select") {
       toast.error("Please fill all required fields");
       return false;
     }
@@ -169,7 +169,7 @@ function Register() {
             <div className="mb-3">
               <label className="form-label">Surname</label>
               <input
-                required
+                
                 type="text"
                 className="form-control"
                 onChange={(e) => setSurname(e.target.value)}
