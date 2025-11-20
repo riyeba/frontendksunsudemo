@@ -6,13 +6,14 @@ import React, { useEffect, useState } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { HashLink as Link } from "react-router-hash-link";
 
-const UserLoginStatus = localStorage.getItem('UserLoginStatus');
-const UserLoginStatu = localStorage.getItem('UserLoginStatu');
+
 
 function NavBar() {
   const [active, setActive] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [isCollapsed, setIsCollapsed] = useState(true);  // State to track navbar collapse
+  const [isCollapsed, setIsCollapsed] = useState(true);  
+  const UserLoginStatus = localStorage.getItem('UserLoginStatus');
+const UserLoginStatu = localStorage.getItem('UserLoginStatu');
 
   useEffect(() => {
     const fetchData = async () => {
