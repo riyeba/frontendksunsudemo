@@ -285,12 +285,12 @@ function NavBar() {
 
   function LogOut() {
     localStorage.removeItem('UserLoginStatus');
-    window.location.href = '/login';
+    // window.location.href = '/login';
   }
 
   function LogOutal() {
     localStorage.removeItem('UserLoginStatu');
-    window.location.href = '/loginal';
+    // window.location.href = '/loginal';
   }
 
   // Function to handle the collapse toggle when an item is clicked
@@ -359,7 +359,7 @@ function NavBar() {
                   Active Student
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li onClick={() => LogOut()}><Link className="dropdown-item text-dark fs-5" href="#"></Link></li>
+                  <li onClick={() => LogOut()}><Link className="dropdown-item text-dark fs-5" to="/">LogOut</Link></li>
                 </ul>
               </li>
             ) : ""}
@@ -371,7 +371,7 @@ function NavBar() {
                     Alumni
                   </a>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li onClick={() => LogOutal()}><Link className="dropdown-item" href="#"></Link></li>
+                    <li onClick={() => LogOutal()}><Link className="dropdown-item" to="/">LogOut</Link></li>
                   </ul>
                 </li>
               </div>
