@@ -130,7 +130,7 @@ const navigate=useNavigate()
                   Active Student
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li onClick={() => LogOut()}><Link className="dropdown-item text-dark fs-5" href="#">LogOut</Link></li>
+                  <li onClick={() => LogOut()}><Link className="dropdown-item text-dark fs-5">LogOut</Link></li>
                 </ul>
               </li>
             ) : ""}
@@ -142,7 +142,7 @@ const navigate=useNavigate()
                     Alumni
                   </a>
                   <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li onClick={() => LogOutal()}><Link className="dropdown-item" href="#">LogOut</Link></li>
+                    <li onClick={() => LogOutal()}><Link className="dropdown-item" >LogOut</Link></li>
                   </ul>
                 </li>
               </div>
