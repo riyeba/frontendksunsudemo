@@ -39,11 +39,11 @@ function SignInAl() {
         <h3 className="card-header mb-3">Log In (Alumni)</h3>
         <div className="container">
           {/* Displaying Login Info for Alumni */}
-          <div className="alert alert-info">
+          {/* <div className="alert alert-info">
             <strong>Login Credentials</strong><br />
             To login as alumni: <strong>email: moriyebas@gmail.com</strong> and <strong>password: 123457</strong><br />
             To login as admin, please go to the student section. You can also sign up as alumni by entering a valid email address.
-          </div>
+          </div> */}
 
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">

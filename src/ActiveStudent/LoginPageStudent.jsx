@@ -103,12 +103,12 @@ function SignIn() {
         <h3 className="card-header mb-3">Sign In</h3>
         <div className="container">
           {/* Displaying Login Info for Admin and Student */}
-          <div className="alert alert-info">
+          {/* <div className="alert alert-info">
             <strong>Login Credentials</strong><br />
             To login as admin: <strong>email: thankyou@gmail.com</strong> and <strong>password: 123456</strong><br />
             To login as student: <strong>email: taakinpennu@gmail.com</strong> and <strong>password: 123456</strong><br />
             You can also sign up by entering a valid email address.
-          </div>
+          </div> */}
 
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">
