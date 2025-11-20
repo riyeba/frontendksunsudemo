@@ -219,6 +219,7 @@ import axios from "axios";
 import RecentEvent from "./Moving";
 import Upcoming from "./UpcomingEvent";
 import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   const [active, setActive] = useState([]);
@@ -393,7 +394,7 @@ const LandingPage = () => {
                 Join our vibrant community of Nigerian students pursuing academic excellence at King Saud University.
               </p>
               
-              <a href="/home" style={{ textDecoration: 'none' }}>
+              <Link to="/home" style={{ textDecoration: 'none' }}>
                 <button 
                   style={styles.ctaButton}
                   onMouseEnter={(e) => {
@@ -408,7 +409,7 @@ const LandingPage = () => {
                   Join the Community
                   <span>→</span>
                 </button>
-              </a>
+              </Link>
             </div>
             
             <div className="col-lg-6 d-none d-lg-block">
@@ -600,7 +601,7 @@ const LandingPage = () => {
           <p style={{ fontSize: '20px', color: '#d1fae5', marginBottom: '40px', maxWidth: '700px', margin: '0 auto 40px' }}>
             Become part of a thriving community of Nigerian students at King Saud University
           </p>
-          <a href="/home" style={{ textDecoration: 'none' }}>
+          <Link to="/home" style={{ textDecoration: 'none' }}>
             <button 
               style={styles.ctaButton}
               onMouseEnter={(e) => {
@@ -615,7 +616,7 @@ const LandingPage = () => {
               Get Started Today
               <span>→</span>
             </button>
-          </a>
+          </Link>
         </div>
       </section>
 
