@@ -33,7 +33,7 @@ function Register() {
 
   const validateForm = () => {
    
-    if ( Gender === "select" || !Surname || !First_name || Degree === "select"  || !College || !Phone_number || !auth_email || !auth_password  || FamilyinSaudi==="Select") {
+    if ( Gender === "select" || !Surname || !First_name || Degree === "select"  || !College || !auth_email || !auth_password  || FamilyinSaudi==="Select") {
       toast.error("Please fill all required fields");
       return false;
     }
@@ -64,15 +64,15 @@ function Register() {
 
      
    
-    if (FamilyinSaudi === "Yes" && !Address) {
-      toast.error("Please enter address if family is in Saudi Arabia");
-      return false;
-    }
+    // if (FamilyinSaudi === "Yes" && !Address) {
+    //   toast.error("Please enter address if family is in Saudi Arabia");
+    //   return false;
+    // }
 
-    if (FamilyinSaudi === "No" && (!Building_number || !Room_number)) {
-      toast.error("Please enter hostel building and room number if family is not in Saudi Arabia");
-      return false;
-    }
+    // if (FamilyinSaudi === "No" && (!Building_number || !Room_number)) {
+    //   toast.error("Please enter hostel building and room number if family is not in Saudi Arabia");
+    //   return false;
+    // }
 
     
     if (photo) {
@@ -246,7 +246,7 @@ function Register() {
             <div className="mb-3">
               <label className="form-label">College</label>
               <input
-                required
+                
                 type="text"
                 className="form-control"
                 onChange={(e) => setCollege(e.target.value)}
@@ -255,7 +255,7 @@ function Register() {
             <div className="mb-3">
               <label className="form-label">Phone Number</label>
               <input
-                required
+                
                 type="text"
                 className="form-control"
                 placeholder="+966"
@@ -294,7 +294,7 @@ function Register() {
 
 
           <h3 className="card-header mb-3 mt-5">Emergency Contact</h3>
-          <p className="text-dark fw-bold fs-7"> Please note that only the admin has access to your emergency contact.</p>
+          <p className="text-dark fw-bold fs-7"> Please note that only the admin can access your emergency info.</p>
          
          
           
