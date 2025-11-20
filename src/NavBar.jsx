@@ -12,10 +12,20 @@ function NavBar() {
   const [active, setActive] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isCollapsed, setIsCollapsed] = useState(true);  
-  const UserLoginStatus = localStorage.getItem('UserLoginStatus');
-const UserLoginStatu = localStorage.getItem('UserLoginStatu');
+   const [userLoginStatus, setUserLoginStatus] = useState(null);
+  const [userLoginStatu, setUserLoginStatu] = useState(null);
+// const UserLoginStatus = localStorage.getItem('UserLoginStatus');
+// const UserLoginStatu = localStorage.getItem('UserLoginStatu');
 
   useEffect(() => {
+    
+    const userLoginStatus = localStorage.getItem('UserLoginStatus');
+    const userLoginStatu = localStorage.getItem('UserLoginStatu');
+    
+    // Update state with localStorage values after the component mounts
+    setUserLoginStatus(userLoginStatus);
+    setUserLoginStatu(userLoginStatu);
+
     const fetchData = async () => {
       try {
         const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/logo/");
@@ -38,7 +48,7 @@ const UserLoginStatu = localStorage.getItem('UserLoginStatu');
   }
 
   function LogOutal() {
-    localStorage.removeItem('UserLoginStatu');
+    localStorage.removeItem('userLoginStatu');
     window.location.href = '/loginal';
   }
 
@@ -82,21 +92,21 @@ const UserLoginStatu = localStorage.getItem('UserLoginStatu');
 
         <div className={`collapse navbar-collapse ${isCollapsed ? '' : 'show'}`} id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto">
-            {UserLoginStatus === 'true' ? (
+            {userLoginStatus === 'true' ? (
               <Link className="nav-link active text-white fs-6" to="/" onClick={handleNavItemClick}>Home</Link>
             ) : (
               <Link className="nav-link active text-white fs-6" to="#" onClick={handleNavItemClick}>Home</Link>
             )}
 
-            {UserLoginStatus === 'true' && (
+            {userLoginStatus === 'true' && (
               <Link className="nav-link active text-white fs-6" to="/board" onClick={handleNavItemClick}>Dashboard</Link>
             )}
 
-            {UserLoginStatus === 'true' ? "" : (
+            {userLoginStatus === 'true' ? "" : (
               <li><button className="nav-link active text-white fs-6" onClick={() => handleSmoothScroll('excopage')}>Excos</button></li>
             )}
 
-            {UserLoginStatus === 'true' ? "" : (
+            {userLoginStatus === 'true' ? "" : (
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle text-white"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Events
@@ -108,11 +118,11 @@ const UserLoginStatu = localStorage.getItem('UserLoginStatu');
               </li>
             )}
 
-            {UserLoginStatus === 'true' ? "" : (
+            {userLoginStatus === 'true' ? "" : (
               <Link className="nav-link active text-white fs-6" to="/home" onClick={handleNavItemClick}>Login</Link>
             )}
 
-            {UserLoginStatus === 'true' ? (
+            {userLoginStatus === 'true' ? (
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Active Student
@@ -123,7 +133,7 @@ const UserLoginStatu = localStorage.getItem('UserLoginStatu');
               </li>
             ) : ""}
 
-            {UserLoginStatu === 'true' ? (
+            {userLoginStatu === 'true' ? (
               <div>
                 <li className="nav-item dropdown">
                   <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
