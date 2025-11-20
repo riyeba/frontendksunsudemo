@@ -105,7 +105,7 @@ const navigate=useNavigate()
             )}
 
             {userLoginStatus === 'true' ? "" : (
-              <li><button className="nav-link active text-white fs-6" onClick={() => handleSmoothScroll('excopage')}>Excos</button></li>
+              <li><button className="nav-link active text-white fs-6" onClick={() => {handleSmoothScroll('excopage'); handleNavItemClick();}} >Excos</button></li>
             )}
 
             {userLoginStatus === 'true' ? "" : (
@@ -114,8 +114,8 @@ const navigate=useNavigate()
                   Events
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <button className="dropdown-item" onClick={() => handleSmoothScroll('recentpage')}>Recent</button>
-                  <button className="dropdown-item"  onClick={() => handleSmoothScroll('upcomingpage')}>Upcoming</button>
+                  <button className="dropdown-item"  onClick={() => {handleSmoothScroll('recentpage'); handleNavItemClick();}}>Recent</button>
+                  <button className="dropdown-item"  onClick={() => {handleSmoothScroll('upcomingpage');handleNavItemClick();}}>Upcoming</button>
                 </ul>
               </li>
             )}

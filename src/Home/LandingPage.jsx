@@ -1809,7 +1809,7 @@ const LandingPage = () => {
           <div className="row">
             {[
               { label: "Active Members", value: "500+", icon: "👥" },
-              { label: "Events Yearly", value: "50+", icon: "📅" },
+              { label: "Events Yearly", value: "30+", icon: "📅" },
               { label: "Departments", value: "20+", icon: "🏆" },
               { label: "Years Active", value: "10+", icon: "⭐" }
             ].map((stat, idx) => (
