@@ -33,8 +33,38 @@ function Register() {
 
   const validateForm = () => {
    
-    if ( Gender === "select"  || !First_name || Degree === "select"  || !auth_email || !auth_password  || FamilyinSaudi==="Select") {
-      toast.error("Please fill all required fields");
+    // if ( Gender === "select"  || !First_name || Degree === "select"  || !auth_email || !auth_password  || FamilyinSaudi==="Select") {
+    //   toast.error("Please fill all required fields");
+    //   return false;
+    // }
+
+    if ( Gender === "select") {
+      toast.error("Please select your gender");
+      return false;
+    }
+
+    if ( Degree === "select") {
+      toast.error("Degree can not be empty");
+      return false;
+    }
+
+     if ( FamilyinSaudi === "select") {
+      toast.error("Is your FamilyinSaudi?");
+      return false;
+    }
+
+    if (!First_name ) {
+      toast.error("First_name can not be empty");
+      return false;
+    }
+
+     if (!auth_email ) {
+      toast.error("Email can not be empty");
+      return false;
+    }
+
+     if (!auth_password ) {
+      toast.error("Password can not be empty");
       return false;
     }
 
@@ -158,6 +188,7 @@ function Register() {
           <div className="container">
           <div className="mb-3">
               <label className="form-label">Gender</label>
+              <span className="text-red-500 ml-1">*</span>
               <select
                 className="form-select"
                 
@@ -179,6 +210,7 @@ function Register() {
             </div>
             <div className="mb-3">
               <label className="form-label">First Name</label>
+              <span className="text-red-500 ml-1">*</span>
               <input
                 required
                 type="text"
@@ -188,6 +220,7 @@ function Register() {
             </div>
             <div className="mb-3">
               <label className="form-label">Degree</label>
+              <span className="text-red-500 ml-1">*</span>
               <select
                 className="form-select"
                 
@@ -203,6 +236,7 @@ function Register() {
             </div>
             <div className="mb-3">
               <label className="form-label">Family in Saudi Arabia?</label>
+              <span className="text-red-500 ml-1">*</span>
               <select
                 className="form-select"
                 required
@@ -215,7 +249,7 @@ function Register() {
             </div>
             {FamilyinSaudi === "Yes" && (
               <div className="mb-3">
-                <label className="form-label">Address (If your family is in Saudi Arabia)</label>
+                <label className="form-label">Address (if your family is in Saudi Arabia)</label>
                 <input
                   type="text"
                   className="form-control"
@@ -266,6 +300,7 @@ function Register() {
             </div>
             <div className="mb-3">
               <label className="form-label">Email</label>
+              <span className="text-red-500 ml-1">*</span>
               <input
                 onChange={(e) => setauth_email(e.target.value)}
                 type="email"
@@ -275,6 +310,7 @@ function Register() {
             </div>
             <div className="mb-3">
               <label className="form-label">Password</label>
+              <span className="text-red-500 ml-1">*</span>
               <input
                 onChange={(e) => setauth_password(e.target.value)}
                 type={show ? "password" : "text"}
@@ -296,7 +332,7 @@ function Register() {
 
 
           <h3 className="card-header mb-3 mt-5">Emergency Contact</h3>
-          <p className="text-dark fw-bold fs-7"> Please note that only the admin can access your emergency info.</p>
+          <p className="text-dark fw-bold fs-7"> Please note that only the admin can access your emergency contact.</p>
          
          
           
