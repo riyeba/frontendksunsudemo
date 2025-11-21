@@ -38,17 +38,17 @@ function Register() {
     //   return false;
     // }
 
-    if ( Gender === "select") {
+    if ( Gender === "Select") {
       toast.error("Please select your gender");
       return false;
     }
 
-    if ( Degree === "select") {
+    if ( Degree === "Select") {
       toast.error("Degree can not be empty");
       return false;
     }
 
-     if ( FamilyinSaudi === "select") {
+     if ( FamilyinSaudi === "Select") {
       toast.error("Is your FamilyinSaudi?");
       return false;
     }
