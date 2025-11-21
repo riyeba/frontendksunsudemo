@@ -1882,16 +1882,16 @@ const LandingPage = () => {
                         <span style={{ fontWeight: '600', color: '#374151' }}>Position: </span>
                         <span style={{ color: '#6b7280' }}>{el.exco}</span>
                       </p>
-                      <p style={{ marginBottom: '8px' }}>
+                      {/* <p style={{ marginBottom: '8px' }}>
                         <span style={{ fontWeight: '600', color: '#374151' }}>Department: </span>
                         <span style={{ color: '#6b7280' }}>{el.department}</span>
-                      </p>
-                      <p style={{ marginBottom: '8px' }}>
+                      </p> */}
+                      {/* <p style={{ marginBottom: '8px' }}>
                         <span style={{ fontWeight: '600', color: '#374151' }}>Degree: </span>
                         <span style={{ color: '#6b7280' }}>{el.degree}</span>
-                      </p>
+                      </p> */}
                       <p style={{ marginBottom: 0 }}>
-                        <span style={{ fontWeight: '600', color: '#374151' }}>Mobile: </span>
+                        <span style={{ fontWeight: '600', color: '#374151' }}>Email: </span>
                         <span style={{ color: '#6b7280' }}>{el.mobile}</span>
                       </p>
                     </div>
