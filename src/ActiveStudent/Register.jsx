@@ -45,12 +45,14 @@ function Register() {
       return false;
     }
 
-   
-    const phoneRegex = /^\+?[0-9]{10,14}$/;
+   if(Phone_number){
+     const phoneRegex = /^\+?[0-9]{10,14}$/;
     if (!phoneRegex.test(Phone_number)) {
       toast.error("Please enter a valid phone number");
       return false;
     }
+   }
+    
 
     
 
