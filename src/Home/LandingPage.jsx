@@ -1624,10 +1624,11 @@ const LandingPage = () => {
       border: '1px solid #f0f0f0'
     },
     excoImage: {
-      height: '280px',
+      height: '310px',
       width: '100%',
       objectFit: 'cover',
-      background: 'linear-gradient(135deg, #10b981, #059669)'
+      objectPosition: 'center 30%',
+      // background: 'linear-gradient(135deg, #10b981, #059669)'
     },
     presidentCard: {
       backgroundColor: 'white',
@@ -1865,11 +1866,11 @@ const LandingPage = () => {
                       style={styles.excoImage}
                       loading="lazy"
                     />
-                    <div style={{
+                    {/* <div style={{
                       position: 'absolute',
                       inset: 0,
                       background: 'linear-gradient(to top, rgba(0,0,0,0.5), transparent)'
-                    }}></div>
+                    }}></div> */}
                   </div>
                   
                   <div style={{ padding: '25px' }}>
@@ -1891,7 +1892,7 @@ const LandingPage = () => {
                         <span style={{ color: '#6b7280' }}>{el.degree}</span>
                       </p> */}
                       <p style={{ marginBottom: 0 }}>
-                        <span style={{ fontWeight: '600', color: '#374151' }}>Email: </span>
+                        <span style={{ fontWeight: '600', color: '#374151' }}>Contact: </span>
                         <span style={{ color: '#6b7280' }}>{el.mobile}</span>
                       </p>
                     </div>

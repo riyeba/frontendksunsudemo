@@ -13,7 +13,7 @@ function ActiveStudents() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/nsu/1")
+        const response = await axios.get("https://taiwoakinpennu2.pythonanywhere.com/nsu/")
         setActive(response.data);
         setIsLoading(false);
         console.log(response);
@@ -26,6 +26,8 @@ function ActiveStudents() {
 
     fetchData();
   }, []);
+
+  console.log(active)
 
   // Calculate the start and end index of the current page
   const startIndex = (currentPage - 1) * 12;
@@ -114,4 +116,3 @@ function ActiveStudents() {
 
 export default ActiveStudents;
 
-// https://youtu.be/l6tPaXFgfOo?si=FyRpVvgKw5ec3jxp

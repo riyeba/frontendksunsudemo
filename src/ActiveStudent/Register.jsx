@@ -33,42 +33,13 @@ function Register() {
 
   const validateForm = () => {
    
-    // if ( Gender === "select"  || !First_name || Degree === "select"  || !auth_email || !auth_password  || FamilyinSaudi==="Select") {
-    //   toast.error("Please fill all required fields");
-    //   return false;
-    // }
-
-    if ( Gender === "Select") {
-      toast.error("Please select your gender");
+    if ( Gender === "Select"  || !First_name || !Surname || !College || Degree === "Select"  || !auth_email || !auth_password || !Phone_number || FamilyinSaudi==="Select") {
+      toast.error("Please fill all required fields with * ");
       return false;
     }
 
-    if ( Degree === "Select") {
-      toast.error("Degree can not be empty");
-      return false;
-    }
+   
 
-     if ( FamilyinSaudi === "Select") {
-      toast.error("Is your FamilyinSaudi?");
-      return false;
-    }
-
-    if (!First_name ) {
-      toast.error("First_name can not be empty");
-      return false;
-    }
-
-     if (!auth_email ) {
-      toast.error("Email can not be empty");
-      return false;
-    }
-
-     if (!auth_password ) {
-      toast.error("Password can not be empty");
-      return false;
-    }
-
-  
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(auth_email)) {
       toast.error("Please enter a valid email address");
@@ -201,6 +172,7 @@ function Register() {
             </div>
             <div className="mb-3">
               <label className="form-label">Surname</label>
+              <span className="text-red-500 ml-1">*</span>
               <input
                 
                 type="text"
@@ -212,7 +184,7 @@ function Register() {
               <label className="form-label">First Name</label>
               <span className="text-red-500 ml-1">*</span>
               <input
-                required
+                
                 type="text"
                 className="form-control"
                 onChange={(e) => setFirst_name(e.target.value)}
@@ -281,8 +253,9 @@ function Register() {
             )}
             <div className="mb-3">
               <label className="form-label">College</label>
+              <span className="text-red-500 ml-1">*</span>
               <input
-                
+                placeholder="Science"
                 type="text"
                 className="form-control"
                 onChange={(e) => setCollege(e.target.value)}
@@ -290,6 +263,7 @@ function Register() {
             </div>
             <div className="mb-3">
               <label className="form-label">Phone Number</label>
+              <span className="text-red-500 ml-1">*</span>
               <input
                 
                 type="text"
@@ -332,7 +306,7 @@ function Register() {
 
 
           <h3 className="card-header mb-3 mt-5">Emergency Contact</h3>
-          <p className="text-dark fw-bold fs-7"> Please note that only the admin can access your emergency contact.</p>
+          <p className="text-dark fw-bold fs-7"> Please note that only the admin can access your emergency info.</p>
          
          
           
