@@ -226,6 +226,7 @@ function Register() {
                 <input
                   type="text"
                   className="form-control"
+                  placeholder="write short address e.g Ad-diriyah"
                   onChange={(e) => setAddress(e.target.value)}
                 />
               </div>
