@@ -79,7 +79,7 @@ function RecentEvent() {
     fetchDataExco();
   }, []);
 
-  const lastThree = eventdata?.slice(-10);
+  const lastThree = eventdata?.slice(-9);
 
   return (
     <section className="container-fluid" style={{ width: "21rem", height: "auto" }}>
