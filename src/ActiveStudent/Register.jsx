@@ -23,6 +23,7 @@ function Register() {
   const [FamilyinSaudi, setFamilyinSaudi] = useState("Select");
   const [Building_number, setBuilding_number] = useState("");
   const [Room_number, setRoom_number] = useState("");
+  
  
   const [Nextofkin_mobile, setNextofkin_mobile] = useState("");
 
@@ -232,7 +233,7 @@ function Register() {
             {FamilyinSaudi === "No" && (
               <div>
                 <div className="mb-3">
-                  <label className="form-label">Building No</label>
+                  <label className="form-label">Building No (optional)</label>
                   <input
                     type="text"
                     className="form-control"
@@ -241,7 +242,7 @@ function Register() {
                   />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">Room Number</label>
+                  <label className="form-label">Room Number (optional)</label>
                   <input
                     type="text"
                     className="form-control"
@@ -285,12 +286,26 @@ function Register() {
             <div className="mb-3">
               <label className="form-label">Password</label>
               <span className="text-red-500 ml-1">*</span>
+              <div className="position-relative">
               <input
                 onChange={(e) => setauth_password(e.target.value)}
                 type={show ? "password" : "text"}
                 className="form-control"
                 required
               />
+              <span
+      style={{
+        position: "absolute",
+        right: "10px",
+        top: "50%",
+        transform: "translateY(-50%)",
+        cursor: "pointer"
+      }}
+      onClick={() => setShow(!show)}
+    >
+      {show ? "👁️" : "👁️"}
+    </span>
+              </div>
             </div>
             <div className="mb-3">
               <label className="form-label">Upload your passport</label>
@@ -305,7 +320,7 @@ function Register() {
             
 
 
-          <h3 className="card-header mb-3 mt-5">Emergency Contact</h3>
+          <h3 className="card-header mb-3 mt-5">Emergency Contact (optional) </h3>
           <p className="text-dark fw-bold fs-7"> Please note that only the admin can access your emergency info.</p>
          
          

@@ -1866,11 +1866,11 @@ const LandingPage = () => {
                       style={styles.excoImage}
                       loading="lazy"
                     />
-                    {/* <div style={{
+                    <div style={{
                       position: 'absolute',
                       inset: 0,
                       background: 'linear-gradient(to top, rgba(0,0,0,0.5), transparent)'
-                    }}></div> */}
+                    }}></div>
                   </div>
                   
                   <div style={{ padding: '25px' }}>
